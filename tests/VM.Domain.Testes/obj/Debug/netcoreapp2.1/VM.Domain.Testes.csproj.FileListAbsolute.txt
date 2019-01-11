@@ -1,0 +1,17 @@
+D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\tests\VM.Domain.Testes\bin\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\tests\VM.Domain.Testes\bin\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
+D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\tests\VM.Domain.Testes\bin\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
+D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\tests\VM.Domain.Testes\bin\Debug\netcoreapp2.1\VM.Domain.Testes.deps.json
+D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\tests\VM.Domain.Testes\bin\Debug\netcoreapp2.1\VM.Domain.Testes.runtimeconfig.json
+D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\tests\VM.Domain.Testes\bin\Debug\netcoreapp2.1\VM.Domain.Testes.runtimeconfig.dev.json
+D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\tests\VM.Domain.Testes\bin\Debug\netcoreapp2.1\VM.Domain.Testes.dll
+D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\tests\VM.Domain.Testes\bin\Debug\netcoreapp2.1\VM.Domain.Testes.pdb
+D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\tests\VM.Domain.Testes\bin\Debug\netcoreapp2.1\VM.Domain.dll
+D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\tests\VM.Domain.Testes\bin\Debug\netcoreapp2.1\VM.Domain.pdb
+D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\tests\VM.Domain.Testes\obj\Debug\netcoreapp2.1\VM.Domain.Testes.csprojAssemblyReference.cache
+D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\tests\VM.Domain.Testes\obj\Debug\netcoreapp2.1\VM.Domain.Testes.csproj.CoreCompileInputs.cache
+D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\tests\VM.Domain.Testes\obj\Debug\netcoreapp2.1\VM.Domain.Testes.AssemblyInfoInputs.cache
+D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\tests\VM.Domain.Testes\obj\Debug\netcoreapp2.1\VM.Domain.Testes.AssemblyInfo.cs
+D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\tests\VM.Domain.Testes\obj\Debug\netcoreapp2.1\VM.Domain.Testes.csproj.CopyComplete
+D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\tests\VM.Domain.Testes\obj\Debug\netcoreapp2.1\VM.Domain.Testes.dll
+D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\tests\VM.Domain.Testes\obj\Debug\netcoreapp2.1\VM.Domain.Testes.pdb
