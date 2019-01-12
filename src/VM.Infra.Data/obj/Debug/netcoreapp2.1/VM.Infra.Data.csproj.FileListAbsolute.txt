@@ -1,0 +1,6 @@
+D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\src\VM.Infra.Data\bin\Debug\netcoreapp2.1\VM.Infra.Data.deps.json
+D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\src\VM.Infra.Data\bin\Debug\netcoreapp2.1\VM.Infra.Data.dll
+D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\src\VM.Infra.Data\obj\Debug\netcoreapp2.1\VM.Infra.Data.csprojAssemblyReference.cache
+D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\src\VM.Infra.Data\obj\Debug\netcoreapp2.1\VM.Infra.Data.csproj.CoreCompileInputs.cache
+D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\src\VM.Infra.Data\obj\Debug\netcoreapp2.1\VM.Infra.Data.AssemblyInfoInputs.cache
+D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\src\VM.Infra.Data\obj\Debug\netcoreapp2.1\VM.Infra.Data.AssemblyInfo.cs

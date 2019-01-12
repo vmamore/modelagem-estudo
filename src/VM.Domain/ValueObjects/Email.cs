@@ -22,6 +22,7 @@ namespace VM.Domain.ValueObjects
         private void Validar()
         {
             RuleFor(x => x.Endereco)
+                .MaximumLength(300).WithMessage("O campo Email é no máximo de 300 caracteres!")
                 .Matches(new Regex(@"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z"));
         }
 
@@ -32,7 +33,7 @@ namespace VM.Domain.ValueObjects
 
         protected override int GetHashCodeCore()
         {
-            return this.GetHashCode();
+            return this.Endereco.GetHashCode();
         }
     }
 }

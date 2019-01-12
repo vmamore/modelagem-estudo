@@ -14,7 +14,6 @@ namespace VM.Domain.Models
         public DateTime DataCadastro { get; set; }
 
         public Endereco Endereco { get; set; }
-
         public Idade Idade { get; set; }
         public Email Email { get; set; }
         public CPF Cpf { get; set; }
