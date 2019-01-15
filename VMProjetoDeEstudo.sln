@@ -21,7 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VM.Domain", "src\VM.Domain\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VM.Domain.Testes", "tests\VM.Domain.Testes\VM.Domain.Testes.csproj", "{75DE34DF-28F1-41E7-B2CB-1CC6936F1A08}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VM.Infra.Data", "src\VM.Infra.Data\VM.Infra.Data.csproj", "{EBB0650F-B850-4AE4-AB37-74E824C0FCE9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VM.Infra.Data", "src\VM.Infra.Data\VM.Infra.Data.csproj", "{EBB0650F-B850-4AE4-AB37-74E824C0FCE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VM.Presentation.Site", "src\VM.Presentation.Site\VM.Presentation.Site.csproj", "{8088F289-791B-4F6A-B0B2-029A0657368C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{EBB0650F-B850-4AE4-AB37-74E824C0FCE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EBB0650F-B850-4AE4-AB37-74E824C0FCE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EBB0650F-B850-4AE4-AB37-74E824C0FCE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8088F289-791B-4F6A-B0B2-029A0657368C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8088F289-791B-4F6A-B0B2-029A0657368C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8088F289-791B-4F6A-B0B2-029A0657368C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8088F289-791B-4F6A-B0B2-029A0657368C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -51,6 +57,7 @@ Global
 		{6AE51C6B-FE8A-4931-B0CF-3F795C360DC1} = {03264377-0A3D-42DA-A75E-CADB0D93A7F0}
 		{75DE34DF-28F1-41E7-B2CB-1CC6936F1A08} = {03264377-0A3D-42DA-A75E-CADB0D93A7F0}
 		{EBB0650F-B850-4AE4-AB37-74E824C0FCE9} = {23083B01-73AD-47C9-B06B-32674A42D3A2}
+		{8088F289-791B-4F6A-B0B2-029A0657368C} = {539C4629-A1FA-46DD-AB20-3390F7223B30}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {19D3AD95-0DB6-4709-B12E-1BC6BE7A0B99}

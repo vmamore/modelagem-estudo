@@ -4,3 +4,11 @@ D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\src\VM.Infra.Data\obj\Debug\netcorea
 D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\src\VM.Infra.Data\obj\Debug\netcoreapp2.1\VM.Infra.Data.csproj.CoreCompileInputs.cache
 D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\src\VM.Infra.Data\obj\Debug\netcoreapp2.1\VM.Infra.Data.AssemblyInfoInputs.cache
 D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\src\VM.Infra.Data\obj\Debug\netcoreapp2.1\VM.Infra.Data.AssemblyInfo.cs
+D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\src\VM.Infra.Data\bin\Debug\netcoreapp2.1\VM.Infra.Data.pdb
+D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\src\VM.Infra.Data\bin\Debug\netcoreapp2.1\VM.Domain.dll
+D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\src\VM.Infra.Data\bin\Debug\netcoreapp2.1\VM.Domain.pdb
+D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\src\VM.Infra.Data\obj\Debug\netcoreapp2.1\VM.Infra.Data.csproj.CopyComplete
+D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\src\VM.Infra.Data\obj\Debug\netcoreapp2.1\VM.Infra.Data.dll
+D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\src\VM.Infra.Data\obj\Debug\netcoreapp2.1\VM.Infra.Data.pdb
+D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\src\VM.Infra.Data\bin\Debug\netcoreapp2.1\VM.Infra.Data.runtimeconfig.json
+D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\src\VM.Infra.Data\bin\Debug\netcoreapp2.1\VM.Infra.Data.runtimeconfig.dev.json

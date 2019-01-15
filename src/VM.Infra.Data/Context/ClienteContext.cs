@@ -1,7 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using FluentValidation.Results;
+using Microsoft.EntityFrameworkCore;
 using VM.Domain.Models;
 using VM.Infra.Data.Mapping;
 
@@ -9,7 +7,8 @@ namespace VM.Infra.Data.Context
 {
     public class ClienteContext : DbContext
     {
-        protected ClienteContext()
+        public ClienteContext(DbContextOptions<ClienteContext> options) 
+            : base(options)
         {
         }
 
@@ -19,6 +18,8 @@ namespace VM.Infra.Data.Context
         {
             modelBuilder.ApplyConfiguration(new ClienteMap());
 
+            modelBuilder.Ignore<ValidationResult>();
+            
             base.OnModelCreating(modelBuilder);
         }
     }

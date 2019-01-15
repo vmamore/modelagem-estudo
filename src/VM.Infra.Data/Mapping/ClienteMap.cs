@@ -21,43 +21,67 @@ namespace VM.Infra.Data.Mapping
             builder.Property(c => c.DataCadastro)
                 .IsRequired();
 
-            builder.Property(c => c.Idade.DataNascimento)
-                .IsRequired();
+            builder.Property(c => c.Ativo)
+                .IsRequired(); ;
 
-            builder.Property(c => c.Email.Endereco)
-                .HasMaxLength(300)
+            builder.OwnsOne(c => c.Idade, idade =>
+            {
+                idade.Property(i => i.DataNascimento)
                 .IsRequired();
+            });
 
-            builder.Property(c => c.Endereco.Logradouro)
-                .HasMaxLength(150)
-                .IsRequired();
+            builder.OwnsOne(c => c.Email, email =>
+            {
+                email.Property(e => e.Endereco)
+                    .HasMaxLength(300)
+                    .IsRequired();
+            });
 
-            builder.Property(c => c.Endereco.Bairro)
-                .HasMaxLength(100)
-                .IsRequired();
-            
-            builder.Property(c => c.Endereco.Numero)
-                .HasMaxLength(10)
-                .IsRequired();
-            
-            builder.Property(c => c.Endereco.Cidade)
-                .HasMaxLength(100)
-                .IsRequired();
-            
-            builder.Property(c => c.Endereco.Estado)
-                .HasMaxLength(2)
-                .IsRequired();
+            builder.OwnsOne(c => c.Endereco, endereco =>
+            {
+                endereco.Property(e => e.Logradouro)
+                    .HasMaxLength(150)
+                    .IsRequired();
 
-            builder.Property(c => c.Endereco.Complemento)
-                .HasMaxLength(200);
-            
-            builder.Property(c => c.Endereco.Cep.Numero)
-                .HasMaxLength(8)
-                .IsRequired();
+                endereco.Property(e => e.Bairro)
+                    .HasMaxLength(100)
+                    .IsRequired();
 
-            builder.Property(c => c.Cpf)
+                endereco.Property(e => e.Numero)
+                    .HasMaxLength(10)
+                    .IsRequired();
+
+                endereco.Property(e => e.Cidade)
+                    .HasMaxLength(100)
+                    .IsRequired();
+
+                endereco.Property(e => e.Estado)
+                    .HasMaxLength(2)
+                    .IsRequired();
+
+                endereco.Property(e => e.Complemento)
+                    .HasMaxLength(200);
+
+                endereco.OwnsOne(c => c.Cep, cep =>
+                {
+
+                    cep.Property(c => c.Numero)
+                        .HasMaxLength(8)
+                        .IsRequired();
+                });
+            });
+
+
+            builder.OwnsOne(c => c.Cpf, cpf =>
+            {
+                cpf.Property(c => c.Numero)
                 .HasMaxLength(11)
                 .IsRequired();
+            });
+
+            builder.Ignore(c => c.ValidationResult);
+            
+            builder.Ignore(c => c.CascadeMode);
         }
     }
 }

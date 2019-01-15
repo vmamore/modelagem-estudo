@@ -233,10 +233,11 @@
   },
   "libraries": {
     "FluentValidation/8.1.2": {
-      "sha512": "xLK59Y1itHq3ni1M79GtO3GlzLnDWwoud/lC4BUOQaKfHPjsRw5z/dvXuG1Inmt0qKRO8m90kEzjNlxL4mb6Uw==",
+      "sha512": "AGxZY1i5BnQjr+9Q1AJnxtOlnU3pjQuwDPdDi0hsw9rZrottstyvXL13KCtaqqAwKgW+Lc9NFUNmwhiFk3iZww==",
       "type": "package",
       "path": "fluentvalidation/8.1.2",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "fluentvalidation.8.1.2.nupkg.sha512",
         "fluentvalidation.nuspec",
@@ -555,10 +556,11 @@
       ]
     },
     "Microsoft.NETCore.Platforms/2.1.0": {
-      "sha512": "TT+QCi9LcxGTjBssH7S7n5+8DVcwfG4DYgXX7Dk7+BfZ4oVHj8Q0CbYk9glzAlHLsSt3bYzol+fOdra2iu6GOw==",
+      "sha512": "aSTPL94NloSiQVL5Len8wbjFKOnoAX/vOh3s3DF6g3c7GUUMLCDvnBhmA72M2iN2AedyA8hpr7m89kzSAKUnJQ==",
       "type": "package",
       "path": "microsoft.netcore.platforms/2.1.0",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
@@ -714,10 +716,11 @@
       ]
     },
     "System.ComponentModel.Annotations/4.4.1": {
-      "sha512": "/8XSRz3cgSSPEdiV6UFhlfk6/FX9P10MAja4XPCyMCz7/0YTqjtCh4e0jjLYOCJL8jK7O/vhtUjYo1TOSuPngQ==",
+      "sha512": "ToiYqSCioqhtspq2O/jYKtyTC/T0uwWHBTYlzCi6PRbSSHArN1IaRWeHffDamvms5sye5FDUWCfNZgubQpNRsA==",
       "type": "package",
       "path": "system.componentmodel.annotations/4.4.1",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
