@@ -1,19 +1,44 @@
-﻿using FluentValidation;
+﻿using System;
+using FluentValidation;
 using FluentValidation.Results;
 using VM.Domain.Entities;
 using VM.Domain.ValueObjects;
 
-namespace VM.Domain.Models
+namespace VM.Domain.ValueObjects
 {
     public class Endereco : ValueObject<Endereco>
     {
-        public string Logradouro { get; set; }
-        public string Numero { get; set; }
-        public string Cidade { get; set; }
-        public string Estado { get; set; }
-        public string Bairro { get; set; }
-        public string Complemento { get; set; }
-        public Cep Cep { get; set; }
+        public string Logradouro { get; private set; }
+        public string Numero { get; private set; }
+        public string Cidade { get; private set; }
+        public string Estado { get; private set; }
+        public string Bairro { get; private set; }
+        public string Complemento { get; private set; }
+        public Cep Cep { get; private set; }
+
+        public Endereco(string logradouro, string numero, string cidade, string estado, string bairro, string complemento, string cepNumero)
+        {
+            Logradouro = logradouro;
+            Numero = numero;
+            Cidade = cidade;
+            Estado = estado;
+            Bairro = bairro;
+            Complemento = complemento;
+
+            AtribuirCep(cepNumero);
+            // TODO: Adicionar algum erro caso esteja invalido
+        }
+
+        private bool AtribuirCep(string cepNumero)
+        {
+            var cep = new Cep(cepNumero);
+
+            if (!cep.EhValido())
+                return false;
+
+            this.Cep = cep;
+            return true;
+        }
 
         public override bool EhValido()
         {

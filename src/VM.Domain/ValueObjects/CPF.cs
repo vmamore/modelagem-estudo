@@ -4,6 +4,11 @@
     {
         public string Numero { get; private set; }
 
+        public CPF(string cpfNumero)
+        {
+            Numero = cpfNumero;
+        }
+
         public override bool EhValido()
         {
             ValidationResult = Validate(this);

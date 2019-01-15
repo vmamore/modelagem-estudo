@@ -8,20 +8,86 @@ namespace VM.Domain.Models
 {
     public class Cliente : Entity<Cliente>
     {
-        public string Nome { get; set; }
-        public string Sobrenome { get; set; }
-        public bool Ativo { get; set; }
-        public DateTime DataCadastro { get; set; }
+        public string Nome { get; private set; }
+        public string Sobrenome { get; private set; }
+        public bool Ativo { get; private set; }
+        public DateTime DataCadastro { get; private set; }
 
-        public Endereco Endereco { get; set; }
-        public Idade Idade { get; set; }
-        public Email Email { get; set; }
-        public CPF Cpf { get; set; }
+        public Endereco Endereco { get; private set; }
+        public Idade Idade { get; private set; }
+        public Email Email { get; private set; }
+        public CPF Cpf { get; private set; }
+
+        public Cliente(string nome, string sobrenome)
+        {
+            Nome = nome;
+            Sobrenome = sobrenome;
+            Ativo = true;
+            DataCadastro = DateTime.Now;
+
+            // TODO: Atribuição de VO
+        }
+
+        protected Cliente() { }
 
         public override bool EhValido()
         {
             Validar();
             return ValidationResult.IsValid;
+        }
+        
+        public bool AtribuirCpf(string cpfNumero) {
+
+            var cpf = new CPF(cpfNumero);
+
+            if (!cpf.EhValido())
+                return false;
+
+            this.Cpf = cpf;
+            return true;
+        }
+
+        public bool AtribuirEmail(string enderecoEmail)
+        {
+            var email = new Email(enderecoEmail);
+
+            if (!email.EhValido())
+                return false;
+
+            this.Email = email;
+            return true;
+        }
+
+        public bool AtribuirIdade(DateTime dataNascimento)
+        {
+            var idade = new Idade(dataNascimento);
+
+            if (!idade.EhValido())
+                return false;
+
+            this.Idade = idade;
+            return true;
+        }
+
+        public bool AtribuirEndereco(string logradouro, string numero, string cidade, string estado, string bairro, string complemento, string cepNumero)
+        {
+            var endereco = new Endereco(logradouro, numero, cidade, estado, bairro, complemento, cepNumero);
+
+            if (!endereco.EhValido())
+                return false;
+
+            this.Endereco = endereco;
+            return true;
+        }
+        
+        public void Inativar()
+        {
+            Ativo = false;
+        }
+        
+        public void Ativar()
+        {
+            Ativo = true;
         }
 
         private void Validar()
