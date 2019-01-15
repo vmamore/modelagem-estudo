@@ -27,7 +27,9 @@ namespace VM.Infra.Data.Mapping
             builder.OwnsOne(c => c.Idade, idade =>
             {
                 idade.Property(i => i.DataNascimento)
-                .IsRequired();
+                    .IsRequired();
+
+                idade.Ignore(i => i.CascadeMode);
             });
 
             builder.OwnsOne(c => c.Email, email =>
@@ -35,6 +37,8 @@ namespace VM.Infra.Data.Mapping
                 email.Property(e => e.Endereco)
                     .HasMaxLength(300)
                     .IsRequired();
+
+                email.Ignore(e => e.CascadeMode);
             });
 
             builder.OwnsOne(c => c.Endereco, endereco =>
@@ -62,12 +66,15 @@ namespace VM.Infra.Data.Mapping
                 endereco.Property(e => e.Complemento)
                     .HasMaxLength(200);
 
+                endereco.Ignore(e => e.CascadeMode);
+
                 endereco.OwnsOne(c => c.Cep, cep =>
                 {
-
                     cep.Property(c => c.Numero)
                         .HasMaxLength(8)
                         .IsRequired();
+
+                    cep.Ignore(c => c.CascadeMode);
                 });
             });
 
@@ -75,8 +82,10 @@ namespace VM.Infra.Data.Mapping
             builder.OwnsOne(c => c.Cpf, cpf =>
             {
                 cpf.Property(c => c.Numero)
-                .HasMaxLength(11)
-                .IsRequired();
+                    .HasMaxLength(11)
+                    .IsRequired();
+
+                cpf.Ignore(c => c.CascadeMode);
             });
 
             builder.Ignore(c => c.ValidationResult);
