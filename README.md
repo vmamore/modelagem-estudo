@@ -5,3 +5,4 @@
   * ASP. Net Core
   * Modelagem do Domínio
   * Teste de Unidade
+  * FluentValidation
