@@ -1,8 +1,5 @@
-﻿using System;
-using FluentValidation;
+﻿using FluentValidation;
 using FluentValidation.Results;
-using VM.Domain.Entities;
-using VM.Domain.ValueObjects;
 
 namespace VM.Domain.ValueObjects
 {
@@ -15,6 +12,8 @@ namespace VM.Domain.ValueObjects
         public string Bairro { get; private set; }
         public string Complemento { get; private set; }
         public Cep Cep { get; private set; }
+
+        protected Endereco() { }
 
         public Endereco(string logradouro, string numero, string cidade, string estado, string bairro, string complemento, string cepNumero)
         {

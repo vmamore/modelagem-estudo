@@ -47,7 +47,7 @@ namespace VM.Presentation.Site
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Cliente}/{action=Index}/{id?}");
+                    template: "{controller=Clientes}/{action=Index}/{id?}");
             });
         }
     }

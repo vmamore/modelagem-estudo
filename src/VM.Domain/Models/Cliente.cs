@@ -28,7 +28,7 @@ namespace VM.Domain.Models
             // TODO: Atribuição de VO
         }
 
-        protected Cliente() { }
+        public Cliente() { }
 
         public override bool EhValido()
         {

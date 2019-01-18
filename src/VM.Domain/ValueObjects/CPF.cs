@@ -4,6 +4,8 @@
     {
         public string Numero { get; private set; }
 
+        protected CPF() { }
+
         public CPF(string cpfNumero)
         {
             Numero = cpfNumero;
