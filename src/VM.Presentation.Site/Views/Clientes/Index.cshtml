@@ -3,9 +3,9 @@
     ViewData["Title"] = "Início";
 }
 
-<h1>Index</h1>
+<h1 class="display-4">Início</h1>
 
-<table>
+<table class="table">
     <thead>
         <tr>
             <td>Nome</td>
@@ -17,12 +17,16 @@
     <tbody>
         @foreach (var cliente in Model)
         {
-            <tr>
-                <td>@cliente.Nome</td>
-                <td>@cliente.Sobrenome</td>
-                <td>@cliente.Cpf.Numero</td>
-                <td><a asp-controller="Clientes" asp-action="Editar" asp-route-id="@cliente.Id">Editar</a></td>
-            </tr>
+        <tr>
+            <td>@cliente.Nome</td>
+            <td>@cliente.Sobrenome</td>
+            <td>@cliente.Cpf.Numero</td>
+            <td>
+                <a asp-controller="Clientes" asp-action="Editar" asp-route-id="@cliente.Id">Editar</a> |
+                <a asp-controller="Clientes" asp-action="Detalhes" asp-route-id="@cliente.Id">Detalhes</a> |
+                <a asp-controller="Clientes" asp-action="Remover" asp-route-id="@cliente.Id">Remover</a>
+            </td>
+        </tr>
         }
     </tbody>
 </table>

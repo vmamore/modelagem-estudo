@@ -28,3 +28,6 @@ D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\src\VM.Presentation.Site\obj\Debug\n
 D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\src\VM.Presentation.Site\bin\Debug\netcoreapp2.2\VM.Presentation.Site.Views.dll
 D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\src\VM.Presentation.Site\bin\Debug\netcoreapp2.2\VM.Presentation.Site.Views.pdb
 D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\src\VM.Presentation.Site\obj\Debug\netcoreapp2.2\VM.Presentation.Site.Views.pdb
+D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\src\VM.Presentation.Site\obj\Debug\netcoreapp2.2\Razor\Views\Clientes\Editar.g.cshtml.cs
+D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\src\VM.Presentation.Site\obj\Debug\netcoreapp2.2\Razor\Views\Clientes\Detalhes.g.cshtml.cs
+D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\src\VM.Presentation.Site\obj\Debug\netcoreapp2.2\Razor\Views\Clientes\Remover.g.cshtml.cs

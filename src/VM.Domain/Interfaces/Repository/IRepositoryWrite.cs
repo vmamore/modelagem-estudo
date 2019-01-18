@@ -8,6 +8,6 @@ namespace VM.Domain.Interfaces.Repository
         TEntity Adicionar(TEntity entidade);
         TEntity Atualizar(TEntity entidade);
         void Remover(int id);
-        int SaveChanges();
+        int Salvar();
     }
 }

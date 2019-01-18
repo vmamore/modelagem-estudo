@@ -60,7 +60,7 @@ namespace VM.Infra.Data.Repository
             DbSet.Remove(entity);
         }
 
-        public int SaveChanges()
+        public int Salvar()
         {
             return Db.SaveChanges();
         }

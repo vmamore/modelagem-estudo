@@ -43,12 +43,7 @@ namespace VM.Presentation.Site
 
             app.UseStaticFiles();
 
-            app.UseMvc(routes =>
-            {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Clientes}/{action=Index}/{id?}");
-            });
+            app.UseMvc();
         }
     }
 }
