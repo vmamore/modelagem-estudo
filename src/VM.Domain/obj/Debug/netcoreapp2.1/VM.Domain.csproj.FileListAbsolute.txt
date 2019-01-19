@@ -6,4 +6,3 @@ D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\src\VM.Domain\obj\Debug\netcoreapp2.
 D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\src\VM.Domain\bin\Debug\netcoreapp2.1\VM.Domain.pdb
 D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\src\VM.Domain\obj\Debug\netcoreapp2.1\VM.Domain.dll
 D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\src\VM.Domain\obj\Debug\netcoreapp2.1\VM.Domain.pdb
-D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\src\VM.Domain\obj\Debug\netcoreapp2.1\VM.Domain.csprojAssemblyReference.cache

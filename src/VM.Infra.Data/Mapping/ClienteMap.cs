@@ -19,6 +19,7 @@ namespace VM.Infra.Data.Mapping
                 .IsRequired();
 
             builder.Property(c => c.DataCadastro)
+                .HasColumnType("date")
                 .IsRequired();
 
             builder.Property(c => c.Ativo)
@@ -28,6 +29,7 @@ namespace VM.Infra.Data.Mapping
             {
                 idade.Property(i => i.DataNascimento)
                     .HasColumnName("DataNascimento")
+                    .HasColumnType("date")
                     .IsRequired();
 
                 idade.Ignore(i => i.CascadeMode);

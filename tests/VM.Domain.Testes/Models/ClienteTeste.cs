@@ -1,6 +1,5 @@
 ﻿using System;
 using VM.Domain.Models;
-using VM.Domain.ValueObjects;
 using Xunit;
 
 namespace VM.Domain.Testes.Models
@@ -10,31 +9,32 @@ namespace VM.Domain.Testes.Models
         [Fact]
         public void Deve_Retornar_True_Para_Cliente_Valido()
         {
-            var cliente = new Cliente
-            {
-                Nome = "Vinícius",
-                Sobrenome = "Mamoré",
-                DataCadastro = DateTime.Now,
-                Idade = new Idade(new DateTime(1997, 10, 25)),
-                Cpf = new CPF(),
-                Email = new Email("vinicius.mamore@gmail.com")
-            };
+            // Arrange
+            var cliente = new Cliente("Vinicius", "Mamoré");
+            
+            cliente.AtribuirIdade(new DateTime(1997, 10, 25));
 
-            Assert.True(cliente.EhValido());
+            cliente.AtribuirCpf("05599934128");
+
+            cliente.AtribuirEmail("vinicius.mamore@gmail.com");
+
+            // Act
+            var resultado = cliente.EhValido();
+
+            // Assert
+            Assert.True(resultado);
         }
 
         [Fact]
         public void Deve_Retornar_False_Para_Cliente_Invalido()
         {
-            var cliente = new Cliente
-            {
-                Nome = "",
-                Sobrenome = "",
-                DataCadastro = DateTime.Now
-            };
+            // Arrange
+            var cliente = new Cliente("", "");
 
+            // Act
             var result = cliente.EhValido();
 
+            // Assert
             Assert.False(result);
         }
     }
