@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Cliente>
+﻿@model IEnumerable<ClienteViewModel>
 @{
     ViewData["Title"] = "Início";
 }
@@ -22,7 +22,7 @@
         <tr>
             <td>@cliente.Nome</td>
             <td>@cliente.Sobrenome</td>
-            <td>@cliente.Cpf.Numero</td>
+            <td>@cliente.CPF</td>
             <td>
                 <a asp-controller="Clientes" asp-action="Editar" asp-route-id="@cliente.Id">Editar</a> |
                 <a asp-controller="Clientes" asp-action="Detalhes" asp-route-id="@cliente.Id">Detalhes</a> |

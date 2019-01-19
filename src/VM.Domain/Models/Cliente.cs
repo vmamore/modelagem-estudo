@@ -69,10 +69,8 @@ namespace VM.Domain.Models
             return true;
         }
 
-        public bool AtribuirEndereco(string logradouro, string numero, string cidade, string estado, string bairro, string complemento, string cepNumero)
+        public bool AtribuirEndereco(Endereco endereco)
         {
-            var endereco = new Endereco(logradouro, numero, cidade, estado, bairro, complemento, cepNumero);
-
             if (!endereco.EhValido())
                 return false;
 

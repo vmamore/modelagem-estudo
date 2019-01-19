@@ -5,7 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\" />
+    <PackageReference Include="AutoMapper" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VM.Domain\VM.Domain.csproj" />
+    <ProjectReference Include="..\VM.Infra.Data\VM.Infra.Data.csproj" />
   </ItemGroup>
 
 </Project>

@@ -6,3 +6,5 @@
   * Modelagem do Domínio
   * Teste de Unidade
   * FluentValidation
+  * AutoMapper
+  

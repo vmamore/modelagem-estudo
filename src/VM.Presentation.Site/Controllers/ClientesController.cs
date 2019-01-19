@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
-using VM.Domain.Interfaces.Repository;
+using VM.Application.Interfaces;
 using VM.Domain.Models;
-using VM.Domain.ValueObjects;
-using VM.Presentation.Site.ViewModels;
+using VM.Presentation.Application.ViewModels;
 
 namespace VM.Presentation.Site.Controllers
 {
@@ -13,18 +11,18 @@ namespace VM.Presentation.Site.Controllers
     [Route("clientes")]
     public class ClientesController : Controller
     {
-        private readonly IClienteRepository _clienteRepository;
+        private readonly IClienteApplicationService _clienteAppService;
 
-        public ClientesController(IClienteRepository clienteRepository)
+        public ClientesController(IClienteApplicationService clienteAppService)
         {
-            _clienteRepository = clienteRepository;
+            _clienteAppService = clienteAppService;
         }
 
         [Route("")]
         [Route("inicio")]
         public IActionResult Index()
         {
-            var clientes = _clienteRepository.ObterTodos();
+            var clientes = _clienteAppService.ObterTodos();
 
             return View(clientes);
         }
@@ -32,119 +30,61 @@ namespace VM.Presentation.Site.Controllers
         [HttpGet("detalhes/{id}")]
         public IActionResult Detalhes(int id)
         {
-            var cliente = _clienteRepository.ObterPor(id);
+            var cliente = _clienteAppService.ObterPor(id);
 
-            var clienteViewModel = new ClienteViewModel()
-            {
-                Nome = cliente.Nome,
-                Sobrenome = cliente.Sobrenome,
-                DataCadastro = cliente.DataCadastro,
-                DataDeNascimento = cliente.Idade.DataNascimento,
-                Ativo = cliente.Ativo
-            };
-
-            return View(clienteViewModel);
+            return View(cliente);
         }
 
         [HttpGet("criar")]
         public IActionResult Criar()
         {
-            var clienteEnderecoViewModel = new ClienteEnderecoViewModel();
-
-            return View(clienteEnderecoViewModel);
+            return View();
         }
 
         [HttpPost("criar")]
         public IActionResult Criar(ClienteEnderecoViewModel clienteEnderecoViewModel)
         {
-            var cliente = new Cliente(clienteEnderecoViewModel.Cliente.Nome, clienteEnderecoViewModel.Cliente.Sobrenome);
-
-            cliente.AtribuirIdade(clienteEnderecoViewModel.Cliente.DataDeNascimento);
-
-            cliente.AtribuirEmail(clienteEnderecoViewModel.Cliente.Email);
-
-            cliente.AtribuirCpf(clienteEnderecoViewModel.Cliente.CPF);
-
-            cliente.AtribuirEndereco(
-                clienteEnderecoViewModel.Endereco.Logradouro,
-                clienteEnderecoViewModel.Endereco.Numero,
-                clienteEnderecoViewModel.Endereco.Cidade,
-                clienteEnderecoViewModel.Endereco.Estado,
-                clienteEnderecoViewModel.Endereco.Bairro,
-                clienteEnderecoViewModel.Endereco.Complemento,
-                clienteEnderecoViewModel.Endereco.Cep);
-
-            if (!cliente.EhValido())
-            {
-                AdicionarErros(cliente.ValidationResult.Errors);
-                return View(clienteEnderecoViewModel);
-            }
-            
-            _clienteRepository.Adicionar(cliente);
-
-            _clienteRepository.Salvar();
+            _clienteAppService.Adicionar(clienteEnderecoViewModel);
 
             return RedirectToAction("Index");
-        }
-
-        private void AdicionarErros(IList<ValidationFailure> errors)
-        {
-            foreach (var erro in errors)
-                ModelState.AddModelError("", erro.ErrorMessage);
         }
 
         [HttpGet("editar/{id}")]
         public IActionResult Editar(int id)
         {
-            var cliente = _clienteRepository.ObterPor(id);
+            var cliente = _clienteAppService.ObterPor(id);
 
-            var clienteViewModel = new ClienteViewModel()
-            {
-                Nome = cliente.Nome,
-                Sobrenome = cliente.Sobrenome,
-                DataCadastro = cliente.DataCadastro,
-                DataDeNascimento = cliente.Idade.DataNascimento,
-                Ativo = cliente.Ativo
-            };
-
-            return View(clienteViewModel);
+            return View(cliente);
         }
 
         [HttpPost("editar/{id}")]
-        public IActionResult Editar(ClienteViewModel clienteViewModel)
+        public IActionResult Editar(ClienteEnderecoViewModel clienteEnderecoViewModel)
         {
+            _clienteAppService.Atualizar(clienteEnderecoViewModel);
+
             return RedirectToAction("Index");
         }
 
         [HttpGet("remover/{id}")]
         public IActionResult Remover(int id)
         {
-            var cliente = _clienteRepository.ObterPor(id);
+            var cliente = _clienteAppService.ObterPor(id);
 
-            var clienteViewModel = new ClienteViewModel()
-            {
-                Nome = cliente.Nome,
-                Sobrenome = cliente.Sobrenome,
-                DataCadastro = cliente.DataCadastro,
-                DataDeNascimento = cliente.Idade.DataNascimento,
-                Ativo = cliente.Ativo
-            };
-
-            return View(clienteViewModel);
+            return View(cliente);
         }
 
         [HttpPost("remover/{id}")]
         public IActionResult RemoverCliente(int id)
         {
-            var cliente = _clienteRepository.ObterPor(id);
-
-            cliente.Inativar();
-
-            _clienteRepository.Atualizar(cliente);
-
-            _clienteRepository.Salvar();
+            _clienteAppService.Remover(id);
 
             return RedirectToAction("Index");
+        }
+        
+        private void AdicionarErros(IList<ValidationFailure> errors)
+        {
+            foreach (var erro in errors)
+                ModelState.AddModelError("", erro.ErrorMessage);
         }
     }
 }

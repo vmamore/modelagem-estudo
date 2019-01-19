@@ -7,3 +7,8 @@ D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\src\VM.Application\obj\Debug\netcore
 D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\src\VM.Application\obj\Debug\netcoreapp2.2\VM.Application.AssemblyInfo.cs
 D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\src\VM.Application\obj\Debug\netcoreapp2.2\VM.Application.dll
 D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\src\VM.Application\obj\Debug\netcoreapp2.2\VM.Application.pdb
+D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\src\VM.Application\bin\Debug\netcoreapp2.2\VM.Domain.dll
+D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\src\VM.Application\bin\Debug\netcoreapp2.2\VM.Infra.Data.dll
+D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\src\VM.Application\bin\Debug\netcoreapp2.2\VM.Domain.pdb
+D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\src\VM.Application\bin\Debug\netcoreapp2.2\VM.Infra.Data.pdb
+D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\src\VM.Application\obj\Debug\netcoreapp2.2\VM.Application.csproj.CopyComplete
