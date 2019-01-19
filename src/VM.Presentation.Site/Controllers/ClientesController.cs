@@ -1,6 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System;
+using System.Collections.Generic;
+using FluentValidation.Results;
+using Microsoft.AspNetCore.Mvc;
 using VM.Domain.Interfaces.Repository;
 using VM.Domain.Models;
+using VM.Domain.ValueObjects;
 using VM.Presentation.Site.ViewModels;
 
 namespace VM.Presentation.Site.Controllers
@@ -30,15 +34,63 @@ namespace VM.Presentation.Site.Controllers
         {
             var cliente = _clienteRepository.ObterPor(id);
 
-            var clienteViewModel = new ClienteViewModel() {
+            var clienteViewModel = new ClienteViewModel()
+            {
                 Nome = cliente.Nome,
                 Sobrenome = cliente.Sobrenome,
                 DataCadastro = cliente.DataCadastro,
                 DataDeNascimento = cliente.Idade.DataNascimento,
                 Ativo = cliente.Ativo
             };
-            
+
             return View(clienteViewModel);
+        }
+
+        [HttpGet("criar")]
+        public IActionResult Criar()
+        {
+            var clienteEnderecoViewModel = new ClienteEnderecoViewModel();
+
+            return View(clienteEnderecoViewModel);
+        }
+
+        [HttpPost("criar")]
+        public IActionResult Criar(ClienteEnderecoViewModel clienteEnderecoViewModel)
+        {
+            var cliente = new Cliente(clienteEnderecoViewModel.Cliente.Nome, clienteEnderecoViewModel.Cliente.Sobrenome);
+
+            cliente.AtribuirIdade(clienteEnderecoViewModel.Cliente.DataDeNascimento);
+
+            cliente.AtribuirEmail(clienteEnderecoViewModel.Cliente.Email);
+
+            cliente.AtribuirCpf(clienteEnderecoViewModel.Cliente.CPF);
+
+            cliente.AtribuirEndereco(
+                clienteEnderecoViewModel.Endereco.Logradouro,
+                clienteEnderecoViewModel.Endereco.Numero,
+                clienteEnderecoViewModel.Endereco.Cidade,
+                clienteEnderecoViewModel.Endereco.Estado,
+                clienteEnderecoViewModel.Endereco.Bairro,
+                clienteEnderecoViewModel.Endereco.Complemento,
+                clienteEnderecoViewModel.Endereco.Cep);
+
+            if (!cliente.EhValido())
+            {
+                AdicionarErros(cliente.ValidationResult.Errors);
+                return View(clienteEnderecoViewModel);
+            }
+            
+            _clienteRepository.Adicionar(cliente);
+
+            _clienteRepository.Salvar();
+
+            return RedirectToAction("Index");
+        }
+
+        private void AdicionarErros(IList<ValidationFailure> errors)
+        {
+            foreach (var erro in errors)
+                ModelState.AddModelError("", erro.ErrorMessage);
         }
 
         [HttpGet("editar/{id}")]

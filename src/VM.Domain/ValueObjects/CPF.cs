@@ -13,8 +13,7 @@
 
         public override bool EhValido()
         {
-            ValidationResult = Validate(this);
-            return ValidationResult.IsValid;
+            return Validar();
         }
 
         private bool Validar()

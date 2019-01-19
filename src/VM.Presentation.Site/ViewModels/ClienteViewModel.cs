@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace VM.Presentation.Site.ViewModels
 {
@@ -12,10 +13,13 @@ namespace VM.Presentation.Site.ViewModels
         public string Email { get; set; }
 
         public bool Ativo { get; set; }
+        
+        [Display(Name = "Data de Nascimento")]
+        public DateTime DataDeNascimento { get; set; }
 
         public DateTime DataCadastro { get; set; }
-        public DateTime DataDeNascimento { get; set; }
-        
+
+
 
     }
 }

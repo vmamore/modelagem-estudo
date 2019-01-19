@@ -115,10 +115,10 @@ namespace VM.Domain.Models
                 .NotNull().WithMessage("É necessário informar idade!");
 
             RuleFor(c => c.Email)
-                .NotNull().WithMessage("É necessário informar email!");
+                .NotNull().WithMessage("É necessário informar Email correto!");
 
             RuleFor(c => c.Cpf)
-                .NotNull().WithMessage("É necessário informar cpf!");
+                .NotNull().WithMessage("É necessário informar o CPF correto!");
         }
     }
 }
