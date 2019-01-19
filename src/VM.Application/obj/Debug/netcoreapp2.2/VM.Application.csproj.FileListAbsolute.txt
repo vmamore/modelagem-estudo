@@ -1,0 +1,9 @@
+D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\src\VM.Application\bin\Debug\netcoreapp2.2\VM.Application.deps.json
+D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\src\VM.Application\bin\Debug\netcoreapp2.2\VM.Application.dll
+D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\src\VM.Application\bin\Debug\netcoreapp2.2\VM.Application.pdb
+D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\src\VM.Application\obj\Debug\netcoreapp2.2\VM.Application.csprojAssemblyReference.cache
+D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\src\VM.Application\obj\Debug\netcoreapp2.2\VM.Application.csproj.CoreCompileInputs.cache
+D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\src\VM.Application\obj\Debug\netcoreapp2.2\VM.Application.AssemblyInfoInputs.cache
+D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\src\VM.Application\obj\Debug\netcoreapp2.2\VM.Application.AssemblyInfo.cs
+D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\src\VM.Application\obj\Debug\netcoreapp2.2\VM.Application.dll
+D:\Labs\.NET Core\Estudos\VMProjetoDeEstudo\src\VM.Application\obj\Debug\netcoreapp2.2\VM.Application.pdb
