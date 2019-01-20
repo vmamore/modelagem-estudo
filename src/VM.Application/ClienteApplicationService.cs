@@ -47,7 +47,15 @@ namespace VM.Application
 
             return clienteEnderecoViewModel;
         }
+
         
+        public ClienteViewModel ObterClientePor(int id)
+        {
+            var cliente = _mapper.Map<ClienteViewModel>(_clienteRepository.ObterPor(id));
+
+            return cliente;
+        }
+
         public ClienteEnderecoViewModel Adicionar(ClienteEnderecoViewModel clienteEnderecoViewModel)
         {
             var cliente = _mapper.Map<Cliente>(clienteEnderecoViewModel.Cliente);

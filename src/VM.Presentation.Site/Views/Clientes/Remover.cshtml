@@ -4,7 +4,10 @@
     ViewData["Title"] = "Remover";
 }
 
-<h1 class="display-4">Remover</h1>
+<div class="row d-flex align-items-center">
+    <h1 class="display-4">Remover</h1>
+    <a asp-action="Index" class="btn btn-outline-warning ml-auto">Voltar para Início</a>
+</div>
 
 <hr />
 <div class="row">
@@ -41,12 +44,9 @@
             <input asp-for="Id" class="form-control" hidden />
             <div class="form-group">
                 <input type="submit" value="Remover" class="btn btn-outline-danger" />
+                
             </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
 

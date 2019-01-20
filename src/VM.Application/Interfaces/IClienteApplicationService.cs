@@ -15,7 +15,9 @@ namespace VM.Application.Interfaces
         ClienteEnderecoViewModel Atualizar(ClienteEnderecoViewModel clienteEnderecoViewModel);
 
         ClienteEnderecoViewModel ObterPor(int id);
-        
+
+        ClienteViewModel ObterClientePor(int id);
+
         void Remover(int id);
     }
 }

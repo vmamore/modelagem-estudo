@@ -30,9 +30,9 @@ namespace VM.Presentation.Site.Controllers
         [HttpGet("detalhes/{id}")]
         public IActionResult Detalhes(int id)
         {
-            var cliente = _clienteAppService.ObterPor(id);
+            var clienteEnderecoViewModel = _clienteAppService.ObterPor(id);
 
-            return View(cliente);
+            return View(clienteEnderecoViewModel);
         }
 
         [HttpGet("criar")]
@@ -68,7 +68,7 @@ namespace VM.Presentation.Site.Controllers
         [HttpGet("remover/{id}")]
         public IActionResult Remover(int id)
         {
-            var cliente = _clienteAppService.ObterPor(id);
+            var cliente = _clienteAppService.ObterClientePor(id);
 
             return View(cliente);
         }

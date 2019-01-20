@@ -1,12 +1,13 @@
 ﻿@model ClienteEnderecoViewModel
 
 @{
-    ViewData["Title"] = "Criar";
+    ViewData["Title"] = "Criar novo Cliente";
 }
 
-<div class="row">
-    <h1 class="display-4">Cliente</h1>
-    <h1 class="display-4 ml-auto">Endereço</h1>
+<div class="row d-flex align-items-center">
+    <h1 class="display-4 pr-5 mr-5">Cliente</h1>
+    <h1 class="display-4 pl-5 ml-auto">Endereço</h1>
+    <a asp-action="Index" class="btn btn-outline-warning ml-auto">Voltar para Início</a>
 </div>
 
 <hr />
@@ -41,6 +42,9 @@
                             <label asp-for="Cliente.DataDeNascimento" class="control-label"></label>
                             <input asp-for="Cliente.DataDeNascimento" class="form-control" />
                             <span asp-validation-for="Cliente.DataDeNascimento" class="text-danger"></span>
+                        </div>
+                        <div class="form-group pt-4">
+                            <input type="submit" value="Salvar" class="btn btn-outline-primary" />
                         </div>
                     </div>
                     <div class="col">
@@ -80,10 +84,6 @@
                             <span asp-validation-for="Endereco.Cep" class="text-danger"></span>
                         </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <input type="submit" value="Salvar" class="btn btn-outline-primary" />
-                    <a asp-action="Index" class="btn btn-outline-warning">Início</a>
                 </div>
             </form>
     </div>
