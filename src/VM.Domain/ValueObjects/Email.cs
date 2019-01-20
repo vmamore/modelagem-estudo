@@ -6,7 +6,7 @@ namespace VM.Domain.ValueObjects
     public class Email : ValueObject<Email>
     {
         public string Endereco { get; private set; }
-
+        
         public Email(string endereco)
         {
             Endereco = endereco;

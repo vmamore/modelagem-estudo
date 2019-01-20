@@ -44,7 +44,7 @@ namespace VM.Presentation.Site.Controllers
         [HttpPost("criar")]
         public IActionResult Criar(ClienteEnderecoViewModel clienteEnderecoViewModel)
         {
-            _clienteAppService.Adicionar(clienteEnderecoViewModel);
+            var clienteRetorno = _clienteAppService.Adicionar(clienteEnderecoViewModel);
 
             return RedirectToAction("Index");
         }
@@ -60,7 +60,7 @@ namespace VM.Presentation.Site.Controllers
         [HttpPost("editar/{id}")]
         public IActionResult Editar(ClienteEnderecoViewModel clienteEnderecoViewModel)
         {
-            _clienteAppService.Atualizar(clienteEnderecoViewModel);
+           var clienteRetorno = _clienteAppService.Atualizar(clienteEnderecoViewModel);
 
             return RedirectToAction("Index");
         }

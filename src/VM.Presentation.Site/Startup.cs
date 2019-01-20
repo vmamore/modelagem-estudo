@@ -44,6 +44,8 @@ namespace VM.Presentation.Site
                 options.UseSqlServer(connectionString);
             });
 
+            services.AddScoped<ApplicationService>();
+            
             services.AddScoped<IClienteRepository, ClienteRepository>();
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();

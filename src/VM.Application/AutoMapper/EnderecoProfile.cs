@@ -9,8 +9,10 @@ namespace VM.Application.AutoMapper
         public EnderecoProfile()
         {
             CreateMap<Endereco, EnderecoViewModel>()
-                .ForMember(d => d.Cep, opt => opt.MapFrom(src => src.Cep.Numero))
-                .ReverseMap();
+                .ForMember(d => d.Cep, opt => opt.MapFrom(src => src.Cep.Numero));
+
+            CreateMap<EnderecoViewModel, Endereco>()
+                .ForMember(d => d.Cep, opt => opt.MapFrom(src =>  new Cep(src.Cep)));
         }
     }
 }

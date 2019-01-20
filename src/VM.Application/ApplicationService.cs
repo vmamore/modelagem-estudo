@@ -4,7 +4,7 @@ namespace VM.Application
 {
     public class ApplicationService
     {
-        private readonly IUnitOfWork _uow;
+        protected readonly IUnitOfWork _uow;
 
         public ApplicationService(IUnitOfWork uow)
         {

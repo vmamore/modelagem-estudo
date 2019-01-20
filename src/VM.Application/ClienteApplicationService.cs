@@ -34,7 +34,7 @@ namespace VM.Application
 
             return clientes;
         }
-        
+
         public ClienteEnderecoViewModel ObterPor(int id)
         {
             var cliente = _mapper.Map<Cliente>(_clienteRepository.ObterPor(id));
@@ -48,7 +48,7 @@ namespace VM.Application
             return clienteEnderecoViewModel;
         }
 
-        
+
         public ClienteViewModel ObterClientePor(int id)
         {
             var cliente = _mapper.Map<ClienteViewModel>(_clienteRepository.ObterPor(id));
@@ -63,9 +63,17 @@ namespace VM.Application
 
             cliente.AtribuirEndereco(endereco);
 
-            _clienteRepository.Adicionar(cliente);
+            if (cliente.EhValido())
+            {
+                _clienteRepository.Adicionar(cliente);
+                _uow.Commit();
+                return clienteEnderecoViewModel;
+            }
 
-            throw new NotImplementedException();
+            clienteEnderecoViewModel.Cliente = _mapper.Map<ClienteViewModel>(cliente);
+            clienteEnderecoViewModel.Endereco = _mapper.Map<EnderecoViewModel>(cliente.Endereco);
+
+            return clienteEnderecoViewModel;
         }
 
         public ClienteEnderecoViewModel Atualizar(ClienteEnderecoViewModel clienteEnderecoViewModel)
@@ -75,9 +83,17 @@ namespace VM.Application
 
             cliente.AtribuirEndereco(endereco);
 
-            _clienteRepository.Atualizar(cliente);
+            if (cliente.EhValido())
+            {
+                _clienteRepository.Atualizar(cliente);
+                _uow.Commit();
+                return clienteEnderecoViewModel;
+            }
 
-            throw new NotImplementedException();
+            clienteEnderecoViewModel.Cliente = _mapper.Map<ClienteViewModel>(cliente);
+            clienteEnderecoViewModel.Endereco = _mapper.Map<EnderecoViewModel>(cliente.Endereco);
+
+            return clienteEnderecoViewModel;
         }
 
         public void Remover(int id)
